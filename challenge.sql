@@ -57,7 +57,7 @@ JOIN employees e ON dm.emp_no = e.emp_no;
 
 -- List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
 SELECT de.dept_no AS department_number, d.dept_name AS department_name, 
-	e.emp_no AS employee_number, e.first_name, e.last_name
+	    e.emp_no AS employee_number, e.first_name, e.last_name
 FROM dept_emp as de
 JOIN departments d ON de.dept_no = d.dept_no
 JOIN employees e ON de.emp_no = e.emp_no;
