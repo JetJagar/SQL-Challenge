@@ -41,7 +41,7 @@ CREATE TABLE titles (
 SELECT e.emp_no, e.last_name, e.first_name, e.sex, s.salary
 FROM employees e
 JOIN salaries s
-ON (e.emp_no = s.emp_no)
+ON (e.emp_no = s.emp_no);
 
 -- List the first name, last name, and hire date for the employees who were hired in 1986.
 SELECT first_name, last_name, hire_date
@@ -62,5 +62,7 @@ FROM dept_emp as de
 JOIN departments d ON de.dept_no = d.dept_no
 JOIN employees e ON de.emp_no = e.emp_no;
 
-
-
+-- List first name, last name, and sex of each employee whose first name is Hercules and whose last name begins with the letter B
+SELECT first_name, last_name, sex
+FROM employees
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
